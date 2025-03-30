@@ -1,1 +1,5 @@
-Flask==2.2.2
+flask
+flask-cors
+flask-restful
+requests
+

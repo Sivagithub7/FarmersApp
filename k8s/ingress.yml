@@ -6,21 +6,20 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: farmersapp.local
+  - host: farmers.local
     http:
       paths:
-      - path: /frontend
+      - path: /
         pathType: Prefix
         backend:
           service:
             name: farmers-frontend-service
             port:
               number: 80
-      - path: /backend
+      - path: /api
         pathType: Prefix
         backend:
           service:
             name: farmers-backend-service
             port:
               number: 5000
-

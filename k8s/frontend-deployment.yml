@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: farmers-frontend
+  labels:
+    app: farmers-frontend
+spec:
+  replicas: 3    # Number of frontend instances
+  selector:
+

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: farmers-backend-service
+  labels:
+    app: farmers-backend
+spec:
+  selector:
+    app: farmers-backend
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+  type: ClusterIP
+

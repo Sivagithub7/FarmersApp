@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: farmers-backend
+  labels:
+    app: farmers
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: farmers-backend
+  template:
+    metadata:
+      labels:
+        app: farmers-backend
+    spec:
+      containers:
+      - name: farmers-backend
+        image: <your-registry>/farmers-backend:latest
+        ports:
+        - containerPort: 5000
+        env:
+        - name: FLASK_ENV
+          value: "production"
