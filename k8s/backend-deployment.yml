@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: farmers-backend
-        image: <your-registry>/farmers-backend:latest
+        image: prasnthdocker/backend:v1
         ports:
         - containerPort: 5000
         env:
