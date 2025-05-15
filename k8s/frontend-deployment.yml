@@ -5,6 +5,17 @@ metadata:
   labels:
     app: farmers-frontend
 spec:
-  replicas: 3    # Number of frontend instances
+  replicas: 2
   selector:
-
+    matchLabels:
+      app: farmers-frontend
+  template:
+    metadata:
+      labels:
+        app: farmers-frontend
+    spec:
+      containers:
+      - name: farmers-backend
+        image: prasnthdocker/frontend:v1
+        ports:
+        - containerPort: 80
